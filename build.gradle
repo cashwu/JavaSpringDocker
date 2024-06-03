@@ -30,6 +30,10 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+bootBuildImage {
+    imageName = "java/${rootProject.name}:${project.version}"
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
